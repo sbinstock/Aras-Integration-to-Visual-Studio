@@ -83,19 +83,19 @@
 					<ButtonText>Manage Method Lock Dialog</ButtonText>
 				</Strings>
 			</Button>
-			<Button guid="guidArasCommandPackageCmdSet" id="LockMethodCommandId" priority="0x0104" type="Button">
+			<Button guid="guidArasCommandPackageCmdSet" id="LockMethodCommandId" priority="0x0103" type="Button">
 				<Parent guid="guidArasCommandPackageCmdSet" id="MyMenuGroup" />
 				<Strings>
 					<ButtonText>Lock Method on Server</ButtonText>
 				</Strings>
 			</Button>
-			<Button guid="guidArasCommandPackageCmdSet" id="UnlockMethodCommandId" priority="0x0105" type="Button">
+			<Button guid="guidArasCommandPackageCmdSet" id="UnlockMethodCommandId" priority="0x0104" type="Button">
 				<Parent guid="guidArasCommandPackageCmdSet" id="MyMenuGroup" />
 				<Strings>
 					<ButtonText>Unlock Method on Server</ButtonText>
 				</Strings>
 			</Button>
-			<Button guid="guidArasCommandPackageCmdSet" id="SaveMethodCommandId" priority="0x0106" type="Button">
+			<Button guid="guidArasCommandPackageCmdSet" id="SaveMethodCommandId" priority="0x0105" type="Button">
 				<Parent guid="guidArasCommandPackageCmdSet" id="MyMenuGroup" />
 				<Strings>
 					<ButtonText>Save Method To Server</ButtonText>
@@ -120,7 +120,19 @@
 					<ButtonText>Manage Method Lock on Deployment Server Dialog</ButtonText>
 				</Strings>
 			</Button>
-			<Button guid="guidArasCommandPackageCmdSet" id="DeploymentSaveMethodCommandId" priority="0x0203" type="Button">
+			<Button guid="guidArasCommandPackageCmdSet" id="DeploymentLockMethodCommandId" priority="0x0203" type="Button">
+				<Parent guid="guidArasCommandPackageCmdSet" id="MyMenuGroupDeployment" />
+				<Strings>
+					<ButtonText>Lock Method on Deployment Server</ButtonText>
+				</Strings>
+			</Button>
+			<Button guid="guidArasCommandPackageCmdSet" id="DeploymentUnlockMethodCommandId" priority="0x0204" type="Button">
+				<Parent guid="guidArasCommandPackageCmdSet" id="MyMenuGroupDeployment" />
+				<Strings>
+					<ButtonText>Unlock Method on Deployment Server</ButtonText>
+				</Strings>
+			</Button>
+			<Button guid="guidArasCommandPackageCmdSet" id="DeploymentSaveMethodCommandId" priority="0x0205" type="Button">
 				<Parent guid="guidArasCommandPackageCmdSet" id="MyMenuGroupDeployment" />
 				<Strings>
 					<ButtonText>Save Method To Deployment Server</ButtonText>
@@ -160,6 +172,8 @@
 			<IDSymbol name="DeploymentRefreshMethodCommandId" value="0x0105" />
 			<IDSymbol name="DeploymentManageLockCommandId" value="0x0106" />
 			<IDSymbol name="DeploymentOpenMethodCommandId" value="0x0107" />
+			<IDSymbol name="DeploymentLockMethodCommandId" value="0x0110" />
+			<IDSymbol name="DeploymentUnlockMethodCommandId" value="0x0111" />
 		</GuidSymbol>
 
 		<GuidSymbol name="guidImages" value="{66c1c4dd-1bf4-4796-a4bc-5148e5f01819}">
