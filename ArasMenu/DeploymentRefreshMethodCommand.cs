@@ -181,7 +181,7 @@ namespace ArasMenu
             Aras.IOM.Item iLogin = connection.Login();
             if (iLogin.isError())
             {
-                util.showError("Unable to connect to Aras Innovator with the server, database, and login information provided in Innovator.config of the active project.", "Connection Error");
+                util.showError("Unable to connect to Aras Innovator with the deployment server, database, and login information provided in Innovator.config of the active project.", "Connection Error");
                 return;
             }
 
@@ -207,7 +207,7 @@ namespace ArasMenu
 
             File.WriteAllText(filePath, modifiedLines);
 
-            util.setStatusBar(fileName + " was succesfully refreshed from the server with method " + methodName);
+            util.setStatusBar(fileName + " was succesfully refreshed from the deployment server with method " + methodName);
         }
     }
 }

@@ -14,6 +14,9 @@
   <PropertyGroup>
     <AssemblyOriginatorKeyFile>Key.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Razorleaf.ico</ApplicationIcon>
+  </PropertyGroup>
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -57,6 +60,7 @@
     <Compile Include="DeploymentOpenMethodCommand.cs" />
     <Compile Include="DeploymentRefreshMethodCommand.cs" />
     <Compile Include="DeploymentSaveMethodCommand.cs" />
+    <Compile Include="LockMethodCommand.cs" />
     <Compile Include="ManageLockCommand.cs" />
     <Compile Include="ManageLockForm.cs">
       <SubType>Form</SubType>
@@ -64,7 +68,6 @@
     <Compile Include="ManageLockForm.Designer.cs">
       <DependentUpon>ManageLockForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="RefreshMethodCommand.cs" />
     <Compile Include="MethodSelectionForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -74,7 +77,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="OpenMethodCommand.cs" />
     <Compile Include="ArasCommandPackage.cs" />
+    <Compile Include="RefreshMethodCommand.cs" />
     <Compile Include="SaveMethodCommand.cs" />
+    <Compile Include="UnlockMethodCommand.cs" />
     <Compile Include="VSPackage.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -108,6 +113,7 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="Templates\ItemTemplates\Visual C#\Aras Innovator\Razorleaf Aras Client Method.zip" />
+    <Content Include="Razorleaf.ico" />
     <Content Include="Templates\ItemTemplates\Visual C#\Aras Innovator\Razorleaf Aras Server Method 11sp9.zip">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

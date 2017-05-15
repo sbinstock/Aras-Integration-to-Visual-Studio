@@ -63,6 +63,9 @@ namespace ArasMenu
             DeploymentRefreshMethodCommand.Initialize(this);
             DeploymentManageLockCommand.Initialize(this);
             DeploymentOpenMethodCommand.Initialize(this);
+
+			LockMethodCommand.Initialize(this);
+			UnlockMethodCommand.Initialize(this);
         }
 
         #endregion
