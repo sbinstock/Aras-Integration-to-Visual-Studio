@@ -53,12 +53,16 @@ namespace ArasMenu
         /// </summary>
         protected override void Initialize()
         {
-            OpenMethodCommand.Initialize(this);
+			OpenMethodCommand.Initialize(this);
             base.Initialize();
             SaveMethodCommand.Initialize(this);
             RefreshMethodCommand.Initialize(this);
             ManageLockCommand.Initialize(this);
+
             DeploymentSaveMethodCommand.Initialize(this);
+            DeploymentRefreshMethodCommand.Initialize(this);
+            DeploymentManageLockCommand.Initialize(this);
+            DeploymentOpenMethodCommand.Initialize(this);
         }
 
         #endregion

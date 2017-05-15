@@ -49,9 +49,13 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <DeployExtension>True</DeployExtension>
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="CommandUtilities.cs" />
+    <Compile Include="DeploymentManageLockCommand.cs" />
+    <Compile Include="DeploymentOpenMethodCommand.cs" />
+    <Compile Include="DeploymentRefreshMethodCommand.cs" />
     <Compile Include="DeploymentSaveMethodCommand.cs" />
     <Compile Include="ManageLockCommand.cs" />
     <Compile Include="ManageLockForm.cs">

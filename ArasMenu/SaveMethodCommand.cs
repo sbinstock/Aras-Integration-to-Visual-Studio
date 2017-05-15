@@ -119,7 +119,7 @@ namespace ArasMenu
             {
                 configItem = currProj.ProjectItems.Item(configName);
             }
-            catch(ArgumentException ex)
+            catch(ArgumentException)
             {
                 util.showError("Required Innovator.config file not found in selected project.", "Config File Not Found");
                 return;
@@ -164,7 +164,7 @@ namespace ArasMenu
             {
                 currItem = dte.ActiveDocument.ProjectItem;
             }
-            catch (ArgumentException ex)
+            catch (ArgumentException)
             {
                 util.showError("Method file not found in current project.", "Method File Not Found");
                 return;

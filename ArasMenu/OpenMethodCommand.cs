@@ -122,7 +122,7 @@ namespace ArasMenu
             {
                 configItem = currProj.ProjectItems.Item(configName);
             }
-            catch (ArgumentException ex)
+            catch (ArgumentException)
             {
                 util.showError("Required Innovator.config file not found in selected project.", "Config File Not Found");
                 return;
@@ -241,7 +241,7 @@ namespace ArasMenu
                 {
                     templatePath = currSol2.GetProjectItemTemplate(jsTemplateName, "CSharp");
                 }
-                catch (ArgumentException ex)
+                catch (ArgumentException)
                 {
                     util.showError("The specified JavaScript template could not be found.", "Template Not Found");
                     return;
@@ -253,7 +253,7 @@ namespace ArasMenu
                 {
                     templatePath = currSol2.GetProjectItemTemplate(csTemplateName, "CSharp");
                 }
-                catch (ArgumentException ex)
+                catch (ArgumentException)
                 {
                     util.showError("The specified CSharp template could not be found.", "Template Not Found");
                     return;
