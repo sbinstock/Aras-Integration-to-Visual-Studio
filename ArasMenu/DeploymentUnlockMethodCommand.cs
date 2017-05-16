@@ -187,9 +187,9 @@ namespace ArasMenu
 
             inn = new Aras.IOM.Innovator(connection);
 
-            Item iQry = inn.newItem("Method", "unlock");
-			iQry.setAttribute("where", string.Format("[Method].name='{0}'", methodName));
-            iQry = iQry.apply();
+            Item iQry = inn.newItem();
+			iQry.loadAML(string.Format(@"<Item type='Method' action='unlock' where=""[Method].name='{0}' and [Method].is_current='1'""  doGetItem='0'/>", methodName));
+			iQry = iQry.apply();
 
             connection.Logout();
 
