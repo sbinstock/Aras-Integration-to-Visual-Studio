@@ -9,7 +9,7 @@
     <PreviewImage>Resources\RazorleafLogo.png</PreviewImage>
   </Metadata>
   <Installation>
-    <InstallationTarget Id="Microsoft.VisualStudio.Community" Version="[14.0]" />
+        <InstallationTarget Id="Microsoft.VisualStudio.Community" Version="[14.0, 15.0]" />
   </Installation>
   <Dependencies>
     <Dependency Id="Microsoft.Framework.NDP" DisplayName="Microsoft .NET Framework" d:Source="Manual" Version="[4.5,)" />
@@ -23,4 +23,7 @@
     <Asset Type="Microsoft.VisualStudio.ProjectTemplate" d:Source="File" Path="ProjectTemplates" d:TargetPath="ProjectTemplates\CSharp\Aras Innovator\11sp9.zip" />
     <Asset Type="Microsoft.VisualStudio.ItemTemplate" d:Source="File" Path="ItemTemplates" d:TargetPath="ItemTemplates\CSharp\Aras Innovator\Razorleaf Aras Server Method 11sp9.zip" />
   </Assets>
+  <Prerequisites>
+   <Prerequisite Id="Microsoft.VisualStudio.Component.CoreEditor" Version="[15.0.25904.2,16.0)" DisplayName="Visual Studio core editor" />
+  </Prerequisites>
 </PackageManifest>

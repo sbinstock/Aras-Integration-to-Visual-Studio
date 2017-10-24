@@ -1,12 +1,32 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="..\packages\Microsoft.VSSDK.BuildTools.14.1.24720\build\Microsoft.VSSDK.BuildTools.props" Condition="Exists('..\packages\Microsoft.VSSDK.BuildTools.14.1.24720\build\Microsoft.VSSDK.BuildTools.props')" />
+  <Import Project="..\packages\Microsoft.VSSDK.BuildTools.15.5.72\build\Microsoft.VSSDK.BuildTools.props" Condition="Exists('..\packages\Microsoft.VSSDK.BuildTools.15.5.72\build\Microsoft.VSSDK.BuildTools.props')" />
   <PropertyGroup>
-    <MinimumVisualStudioVersion>14.0</MinimumVisualStudioVersion>
+    <MinimumVisualStudioVersion>15.0</MinimumVisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
     <UseCodebase>true</UseCodebase>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>14.0</OldToolsVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup>
     <SignAssembly>true</SignAssembly>
@@ -153,13 +173,11 @@
     </VSCTCompile>
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="Aras.Diagnostics, Version=11.0.0.6357, Culture=neutral, PublicKeyToken=524d880b05474146, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\Debug\Aras.Diagnostics.dll</HintPath>
+    <Reference Include="Aras.Diagnostics">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Aras\Ingalls11sp8\Innovator\Server\bin\Aras.Diagnostics.dll</HintPath>
     </Reference>
-    <Reference Include="Aras.Net, Version=11.0.0.6357, Culture=neutral, PublicKeyToken=524d880b05474146, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\Debug\Aras.Net.dll</HintPath>
+    <Reference Include="Aras.Net">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Aras\Ingalls11sp8\Innovator\Server\bin\Aras.Net.dll</HintPath>
     </Reference>
     <Reference Include="EnvDTE, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
       <EmbedInteropTypes>False</EmbedInteropTypes>
@@ -173,9 +191,8 @@
     <Reference Include="EnvDTE90, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
       <EmbedInteropTypes>False</EmbedInteropTypes>
     </Reference>
-    <Reference Include="IOM, Version=11.0.0.6357, Culture=neutral, PublicKeyToken=524d880b05474146, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\Debug\IOM.dll</HintPath>
+    <Reference Include="IOM">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Aras\Ingalls11sp8\Innovator\Server\bin\IOM.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Build.Framework" />
     <Reference Include="Microsoft.CSharp" />
@@ -282,16 +299,28 @@
       <LastGenOutput>VSPackage.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(VSToolsPath)\VSSDK\Microsoft.VsSDK.targets" Condition="'$(VSToolsPath)' != ''" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
       <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
     </PropertyGroup>
-    <Error Condition="!Exists('..\packages\Microsoft.VSSDK.BuildTools.14.1.24720\build\Microsoft.VSSDK.BuildTools.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.VSSDK.BuildTools.14.1.24720\build\Microsoft.VSSDK.BuildTools.props'))" />
-    <Error Condition="!Exists('..\packages\Microsoft.VSSDK.BuildTools.14.1.24720\build\Microsoft.VSSDK.BuildTools.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.VSSDK.BuildTools.14.1.24720\build\Microsoft.VSSDK.BuildTools.targets'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.VSSDK.BuildTools.15.5.72\build\Microsoft.VSSDK.BuildTools.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.VSSDK.BuildTools.15.5.72\build\Microsoft.VSSDK.BuildTools.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.VSSDK.BuildTools.15.5.72\build\Microsoft.VSSDK.BuildTools.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.VSSDK.BuildTools.15.5.72\build\Microsoft.VSSDK.BuildTools.targets'))" />
   </Target>
-  <Import Project="..\packages\Microsoft.VSSDK.BuildTools.14.1.24720\build\Microsoft.VSSDK.BuildTools.targets" Condition="Exists('..\packages\Microsoft.VSSDK.BuildTools.14.1.24720\build\Microsoft.VSSDK.BuildTools.targets')" />
+  <Import Project="..\packages\Microsoft.VSSDK.BuildTools.15.5.72\build\Microsoft.VSSDK.BuildTools.targets" Condition="Exists('..\packages\Microsoft.VSSDK.BuildTools.15.5.72\build\Microsoft.VSSDK.BuildTools.targets')" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
