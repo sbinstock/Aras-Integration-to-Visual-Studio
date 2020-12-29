@@ -202,6 +202,14 @@ namespace ArasMenu
             iQry.setAction("get");
             iQry.setProperty("name", methodName);
             iQry = iQry.apply();
+            
+            //find the World identity and set the method's execution_allowed_to later - SSB
+			Item worldIdentity = inn.newItem();
+			worldIdentity.setType("Identity");
+			worldIdentity.setAction("get");
+			worldIdentity.setProperty("name", "World");
+			worldIdentity = worldIdentity.apply();
+            string worldIdentityID = worldIdentity.getID();
 
             //If method already exists, update, otherwise prompt to add it instead
             bool methodAdded = false;
@@ -217,6 +225,8 @@ namespace ArasMenu
                     addQry.setAction("add");
                     addQry.setProperty("name", methodName);
                     addQry.setProperty("method_code", methodCode);
+                    //add property that automatically makes the method default to "execution_allowed_to" the World identity - SSB
+					addQry.setProperty("execution_allowed_to", worldIdentityID);
 
                     if (methodExtension == ".js")
                     {
